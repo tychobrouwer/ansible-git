@@ -1,0 +1,4 @@
+---
+# vars file for git
+role_git_branch: main
+role_git_editor: nano
