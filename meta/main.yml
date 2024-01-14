@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: git
   author: Tycho Brouwer
   description: Install and configure git for my servers
 
