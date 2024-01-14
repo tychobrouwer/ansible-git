@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: git
+  namespace: tychobrouwer
   author: Tycho Brouwer
   description: Install and configure git for my servers
 
