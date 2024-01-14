@@ -3,6 +3,6 @@
   hosts: all
 
   roles:
-    - role: git_configure
-      role_git_name: Test Test
-      role_git_email: test@test.com
+    - role: ansible-git
+      git_name: Test Test
+      git_email: test@test.com

@@ -2,7 +2,7 @@
 # tasks file for git
 - name: Update apt cache
   ansible.builtin.apt:
-    update_cache: yes
+    update_cache: true
   when: ansible_os_family == 'Debian'
 
 - name: Install git
@@ -13,22 +13,22 @@
   community.general.git_config:
     name: user.name
     scope: system
-    value: "{{ role_git_name }}"
+    value: "{{ git_name }}"
 
 - name: Set git system email
   community.general.git_config:
     name: user.email
     scope: system
-    value: "{{ role_git_email }}"
+    value: "{{ git_email }}"
 
 - name: Set git system default branch
   community.general.git_config:
     name: init.defaultBranch
     scope: system
-    value: "{{ role_git_branch }}"
+    value: "{{ git_branch }}"
 
 - name: Set git system default branch
   community.general.git_config:
     name: core.editor
     scope: system
-    value: "{{ role_git_editor }}"
+    value: "{{ git_editor }}"

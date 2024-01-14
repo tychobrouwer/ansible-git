@@ -6,9 +6,9 @@ This role installs and configures Git for my servers.
 Role Variables
 --------------
 
-The git name and email should be set using the ```role_git_name``` and ```role_git_email``` variables.
+The git name and email should be set using the ```git_name``` and ```git_email``` variables.
 
-The default branch and editor of git can be set using the ```role_git_branch``` and ```role_git_editor``` variables.
+The default branch and editor of git can be set using the ```git_branch``` and ```git_editor``` variables.
 
 Example Playbook
 ----------------
@@ -22,9 +22,9 @@ Including an example of how to use your role (for instance, with variables passe
         git_email: janjanssen@gmail.com
 
       roles:
-         - { role: git_configure, role_git_name: "{{ git_name }}", role_git_email: "{{ git_email }}" }
-         - { role: git_configure, role_git_name: "{{ git_name }}", role_git_email: "{{ git_email }}",
-             role_git_branch: main, role_git_editor: nano }
+         - { role: git_configure, git_name: "{{ git_name }}", git_email: "{{ git_email }}" }
+         - { role: git_configure, git_name: "{{ git_name }}", git_email: "{{ git_email }}",
+             git_branch: main, git_editor: nano }
 ```
 
 License
