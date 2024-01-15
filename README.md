@@ -22,8 +22,8 @@ Including an example of how to use your role (for instance, with variables passe
         git_email: janjanssen@gmail.com
 
       roles:
-         - { role: git_configure, git_name: "{{ git_name }}", git_email: "{{ git_email }}" }
-         - { role: git_configure, git_name: "{{ git_name }}", git_email: "{{ git_email }}",
+         - { role: tychobrouwer.git, git_name: "{{ git_name }}", git_email: "{{ git_email }}" }
+         - { role: tychobrouwer.git, git_name: "{{ git_name }}", git_email: "{{ git_email }}",
              git_branch: main, git_editor: nano }
 ```
 
