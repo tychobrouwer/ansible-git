@@ -16,15 +16,17 @@ Example Playbook
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
 ```yaml
-    - hosts: all
-      vars:
-        git_name: Jan Janssen
-        git_email: janjanssen@gmail.com
+- hosts: all
+  vars:
+    git_name: Jan Janssen
+    git_email: janjanssen@gmail.com
 
-      roles:
-         - { role: tychobrouwer.git, git_name: "{{ git_name }}", git_email: "{{ git_email }}" }
-         - { role: tychobrouwer.git, git_name: "{{ git_name }}", git_email: "{{ git_email }}",
-             git_branch: main, git_editor: nano }
+  roles:
+    - role: tychobrouwer.git
+    
+    - role: tychobrouwer.git
+      git_branch: main
+      git_editor: nano
 ```
 
 License
