@@ -1,6 +1,6 @@
 ---
 # tasks file for git
-- name: Update apt cache
+- name: Update APT cache (Debian-based systems)
   ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 3600
@@ -9,26 +9,27 @@
 - name: Install git
   ansible.builtin.package:
     name: git
+    state: present
 
-- name: Set git system name
+- name: Set Git system user name
   community.general.git_config:
     name: user.name
     scope: system
     value: "{{ git_name }}"
 
-- name: Set git system email
+- name: Set Git system user email
   community.general.git_config:
     name: user.email
     scope: system
     value: "{{ git_email }}"
 
-- name: Set git system default branch
+- name: Set Git default branch
   community.general.git_config:
     name: init.defaultBranch
     scope: system
     value: "{{ git_branch }}"
 
-- name: Set git system default branch
+- name: Set Git system editor
   community.general.git_config:
     name: core.editor
     scope: system
